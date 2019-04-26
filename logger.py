@@ -9,7 +9,7 @@ DHT_sensor = Adafruit_DHT.DHT22
 
 Logging_Delay = 600 # number of seconds between posts
 
-baseURL = 'https://api.thingspeak.com/update?api_key=%s' % THINGSPEAK_API_KEY
+baseURL = 'https://api.thingspeak.com/update?api_key=%s' % config.THINGSPEAK_API_KEY
 print(baseURL)
 
 while True:

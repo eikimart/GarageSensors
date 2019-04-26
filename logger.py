@@ -14,11 +14,12 @@ print(baseURL)
 
 while True:
     try:
-        humidity, temperature = Adafruit_DHT.read_retry(DHT_sensor, DHT_pin)
+        humidity, temperature = Adafruit_DHT.read_retry(DHT_sensor, DHT_pin)        
         temperature = (9/5) * temperature + 32
+        print("Temperature = %s F, Humidity = %s %" % (temperature, humidity))
         f = urllib2.urlopen(baseURL +
                             "&field1=%s&field2=%s" % (temperature, humidity))
-        print f.read()
+        print(f.read())
         f.close()
 
         sleep(int(Logging_Delay))

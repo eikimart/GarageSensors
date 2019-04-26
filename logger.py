@@ -24,6 +24,6 @@ while True:
 
         sleep(int(Logging_Delay))
     except:
-        print 'Exiting'
+        print('Exiting')
         break
     
